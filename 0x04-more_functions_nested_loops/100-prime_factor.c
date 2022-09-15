@@ -12,7 +12,7 @@ int main(void)
 
 	while (i++ < number / 2)
 	{
-		if (number % inc == 0)
+		if (number % i == 0)
 		{
 			number /= 2;
 			continue;
