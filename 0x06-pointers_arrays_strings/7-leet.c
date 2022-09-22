@@ -3,12 +3,12 @@
 /**
  * leet - Encodes a string into 1337.
  *
- * @str: String to be encoded.
+ * @s: String to be encoded.
  *
  * Return: returns encoded string.
  */
 
-char *leet(char *str)
+char *leet(char *s)
 {
 	int i, j;
 	char a[] = "aAeEoOtT1L";
