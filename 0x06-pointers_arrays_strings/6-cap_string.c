@@ -3,34 +3,27 @@
 /**
  * cap_string - Capitalizes all words in a string. First cahracter of a word.
  *
- * @str: String
+ * @x: String
  *
  * Return: returns capitalized string
  */
 
-char *cap_string(char *str)
+char *cap_string(char *x)
 {
-	int index = 0;
+char spc[] = {32, 9 '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+int len = 13;
+int a = 0, i;
 
-	while (str[++index])
+while (x[a])
+{
+	i = 0;
+	while (i < len)
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-
-		if (str[index - 1] == ' ' ||
-				str[index - 1] == '\t' ||
-				str[index - 1] == '\n' ||
-				str[index - 1] == ',' ||
-				str[index - 1] == ';' ||
-				str[index - 1] == '.' ||
-				str[index - 1] == '!' ||
-				str[index - 1] == '?' ||
-				str[index - 1] == '"' ||
-				str[index - 1] == '(' ||
-				str[index - 1] == ')' ||
-				str[index - 1] == '{' ||
-				str[index - 1] == '}')
-			str[index] -= 32;
+		if ((a == 0 || x[a - 1] == spc[i]) && (x[a] >= 97 && x[a] <= 122))
+			x[a] = x[a] - 32;
+		i++;
 	}
-	return (str);
+	a++;
+}
+return (x);
 }
