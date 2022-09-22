@@ -5,7 +5,7 @@
  *
  * @s: String to be encoded.
  *
- * Return: returns encoded string.
+ * Return: address of s
  */
 
 char *leet(char *s)
