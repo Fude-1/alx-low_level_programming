@@ -10,17 +10,21 @@
 
 char *leet(char *s)
 {
-	int i, j;
-	char a[] = "aAeEoOtT1L";
-	char b[] = "4433007711";
+	int a = 0, b, l = 5;
+	char tr[5] = {'A', 'E', 'O', 'T', 'L'};
+	char trw[5] = {'4', '3', '0', '7', '1'};
 
-	for (i = 0; *(s + i); i++)
+	while (s[a])
 	{
-		for (j = 0; j <= 9; j++)
+		b = 0;
+
+		while (b < l)
 		{
-			if (a[j] == *(s + i))
-				*(s + i) = b[j];
+			if (s[a] == tr[b] || s[a] - 32 == tr[b])
+				s[a] = trw[b];
+			b++;
 		}
+		a++;
 	}
 	return (s);
 }
